@@ -1,3 +1,7 @@
+ARG cuda_version=10.1
+ARG cuda_env=devel
+ARG os=centos7
+
 FROM nvidia/cuda:${cuda_version}-${cuda_env}-${os}
 
 RUN yum update -y && yum install -y cmake patch kernel-devel kernel-headers make automake gcc gcc-c++ flex bison perl git wget tbb \
